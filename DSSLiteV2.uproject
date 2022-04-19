@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{3430C108-4B2A-69EC-8BBB-BFB4B6EA0BFA}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "DSSLiteV2",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "DSSLite",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/"
+		}
+	]
+}
