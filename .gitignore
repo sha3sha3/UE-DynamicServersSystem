@@ -1,5 +1,7 @@
 # Visual Studio 2015 user specific files
 .vs/
+Packaging/
+Plugins/DSSLite/
 
 # Compiled Object files
 *.slo
