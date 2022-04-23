@@ -86,7 +86,7 @@ FString ADSSLiteV2GameMode::InitNewPlayer(APlayerController* NewPlayerController
 	FString InName = UGameplayStatics::ParseOption(Options, TEXT("PlayerName")).Left(20);
 	if (InName.IsEmpty())
 	{
-		InName = FString::Printf(TEXT("%s%i"), *DefaultPlayerName.ToString(), NewPlayerController->PlayerState->PlayerId);
+		InName = FString::Printf(TEXT("%s%i"), *DefaultPlayerName.ToString(), NewPlayerController->PlayerState->GetPlayerId());
 	}
 
 	ChangeName(NewPlayerController, InName, true);

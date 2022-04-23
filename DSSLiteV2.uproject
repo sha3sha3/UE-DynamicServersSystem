@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{3430C108-4B2A-69EC-8BBB-BFB4B6EA0BFA}",
+	"EngineAssociation": "{A00AC8D5-49B9-3A4B-A141-5589BDCAD1F5}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -17,7 +17,7 @@
 		{
 			"Name": "DSSLite",
 			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/"
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/829f1f18f7174f23a71d9fc66c629ca2"
 		}
 	]
 }
