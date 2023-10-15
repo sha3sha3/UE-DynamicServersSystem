@@ -32,7 +32,7 @@ FString ADSSLiteV2GameMode::InitNewPlayer(APlayerController* NewPlayerController
 	FString ErrorMessage;
 
 	// Register the player with the session
-	GameSession->RegisterPlayer(NewPlayerController, UniqueId.GetUniqueNetId(), UGameplayStatics::HasOption(Options, TEXT("bIsFromInvite")));
+	GameSession->RegisterPlayer(NewPlayerController, FUniqueNetIdRepl(UniqueId.GetUniqueNetId()), UGameplayStatics::HasOption(Options, TEXT("bIsFromInvite")));
 
 	// Find a starting spot
 	FString TravelingOptions = UGameplayStatics::ParseOption(Options, TEXT("mode"));
