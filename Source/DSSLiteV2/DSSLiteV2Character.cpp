@@ -1,7 +1,6 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #include "DSSLiteV2Character.h"
-#include "HeadMountedDisplayFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -71,16 +70,8 @@ void ADSSLiteV2Character::SetupPlayerInputComponent(class UInputComponent* Playe
 	// handle touch devices
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ADSSLiteV2Character::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ADSSLiteV2Character::TouchStopped);
-
-	// VR headset functionality
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ADSSLiteV2Character::OnResetVR);
 }
 
-
-void ADSSLiteV2Character::OnResetVR()
-{
-	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
-}
 
 void ADSSLiteV2Character::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
