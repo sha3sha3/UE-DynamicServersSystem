@@ -8,7 +8,13 @@ public class DSSLiteV2EditorTarget : TargetRules
 	public DSSLiteV2EditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.Add("DSSLiteV2");
-	}
+        ExtraModuleNames.Add("DSSLiteV2");
+#if UE_5_4_OR_LATER
+        DefaultBuildSettings = BuildSettingsVersion.V5;
+        IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+#else
+	DefaultBuildSettings = BuildSettingsVersion.V2;
+#endif
+
+    }
 }

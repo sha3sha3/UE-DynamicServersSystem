@@ -8,8 +8,14 @@ public class DSSLiteV2ServerTarget : TargetRules
 	public DSSLiteV2ServerTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Server;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.Add("DSSLiteV2");
-		bUseLoggingInShipping = true;
-	}
+		bUseLoggingInShipping = false;
+#if UE_5_4_OR_LATER
+        DefaultBuildSettings = BuildSettingsVersion.V5;
+        IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+#else
+	DefaultBuildSettings = BuildSettingsVersion.V2;
+#endif
+
+    }
 }
